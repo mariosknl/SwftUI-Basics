@@ -3,13 +3,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            LinearGradient(
+                colors: [.red, .purple, .green, .pink],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .opacity(0.8)
+                .ignoresSafeArea()
+            Text("SwiftUI Basics 1")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundStyle(.black)
         }
-        .padding()
     }
 }
 
